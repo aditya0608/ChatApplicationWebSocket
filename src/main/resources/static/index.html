@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChatRoom</title>
+    <link href="/webjars/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/style.css"/>
+    <script src="/webjars/jquery/3.1.1-1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>
+    <script src="webjars/stomp-websocket/2.3.3/stomp.min.js"></script>
+</head>
+<body class="bg-dark">
+<div id="name-from" class="bg-primary d-flex align-items-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="input-group" >
+                    <input type="text" placeholder="Enter your name" id="name-value" autofocus
+                     class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark d-flex align-items-center" id="login">Enter</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="chat-room">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h3 id="name-title"></h3>
+                </div>
+                <div class="card-body">
+                    <div class="input-group" >
+                        <input type="text" placeholder="Enter Your Message"
+                               id="message-value" autofocus
+                               class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn btn-dark "
+                                    id="Send-btn">Send</button>
+                            <button class="btn btn-dark" id="logout" >Logout</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table id="message-container-table">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
